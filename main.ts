@@ -24,14 +24,14 @@ serial.writeLine("Start- wait for radio signal")
 basic.showIcon(IconNames.Square)
 basic.forever(function () {
     if (left_motor >= 0) {
-        MotorDriver.MotorRun(Motor.B, Dir.forward, left_motor / 64)
+        MotorDriver.MotorRun(Motor.B, Dir.forward, left_motor / 200)
     } else {
-        MotorDriver.MotorRun(Motor.B, Dir.backward, left_motor / -64)
+        MotorDriver.MotorRun(Motor.B, Dir.backward, left_motor / -200)
     }
     if (right_motor >= 0) {
-        MotorDriver.MotorRun(Motor.A, Dir.forward, right_motor / 64)
+        MotorDriver.MotorRun(Motor.A, Dir.forward, right_motor / 200)
     } else {
-        MotorDriver.MotorRun(Motor.A, Dir.backward, right_motor / -64)
+        MotorDriver.MotorRun(Motor.A, Dir.backward, right_motor / -200)
     }
 })
 loops.everyInterval(5000, function () {
